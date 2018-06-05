@@ -15,6 +15,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,6 +48,7 @@ public class ProfileFragment extends Fragment {
     private Person person;
     private View view;
     private Unbinder unbinder;
+    private boolean isEditActionLister = true;
 
     @BindView(R.id.dialogue_recyclerview_profile)
     RecyclerView recyclerView;
@@ -184,6 +186,23 @@ public class ProfileFragment extends Fragment {
         }
 
         profileRecyclerAdapter.updateAdapter(person.getHobbies());
+
+        if(isEditActionLister){
+            etCreateHobby.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+                @Override
+                public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+
+                    Boolean hobbyCreated = viewModel.createHobbyForPerson(etCreateHobby.getText().toString().trim());
+                    if (hobbyCreated) {
+                        etCreateHobby.setText("");
+                    } else {
+                        Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.hobby_exists), Toast.LENGTH_SHORT).show();
+                    }
+                    return false;
+                }
+            });
+            isEditActionLister = false;
+        }
 
     }
 

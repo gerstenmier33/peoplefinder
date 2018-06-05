@@ -186,6 +186,7 @@ public class MainActivity extends BaseActivity {
 
         if(bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED){
             bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            return;
         }
         super.onBackPressed();
     }

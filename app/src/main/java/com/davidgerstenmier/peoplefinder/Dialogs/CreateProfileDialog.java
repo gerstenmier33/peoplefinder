@@ -6,6 +6,7 @@ import android.arch.lifecycle.LifecycleOwner;
 import android.arch.lifecycle.Observer;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
+import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -15,12 +16,18 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Display;
+import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
@@ -36,6 +43,7 @@ import com.davidgerstenmier.peoplefinder.utils.MainActivityViewModel;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.OnEditorAction;
 import butterknife.OnTextChanged;
 import butterknife.Unbinder;
 
@@ -47,6 +55,7 @@ public class CreateProfileDialog extends DialogFragment {
     private CreateProfileAdapter hobbyAdapter;
     private boolean isEditing = false;
 
+    private boolean isEditActionLister = true;
     private Unbinder unbinder;
 
     private View view;
@@ -104,6 +113,17 @@ public class CreateProfileDialog extends DialogFragment {
             createButton.setText(getActivity().getResources().getString(R.string.save));
 
         }
+    }
+
+    @Override
+    public void onResume() {
+        Window window = getDialog().getWindow();
+        Point size = new Point();
+        Display display = window.getWindowManager().getDefaultDisplay();
+        display.getSize(size);
+        window.setLayout((int) (size.x * 0.98), WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setGravity(Gravity.CENTER);
+        super.onResume();
     }
 
     @Override
@@ -206,6 +226,24 @@ public class CreateProfileDialog extends DialogFragment {
                 rgGender.check(R.id.dialog_createperson_radiobutton_female);
             }
         }
+        if(isEditActionLister){
+            etHobby.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+                @Override
+                public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+
+                    Boolean hobbyCreated = viewModel.createHobbyForPerson(etHobby.getText().toString().trim());
+                    if (hobbyCreated) {
+                        etHobby.setText("");
+                    } else {
+                        Toast.makeText(getActivity(), getActivity().getResources().getString(R.string.hobby_exists), Toast.LENGTH_SHORT).show();
+                    }
+                    return false;
+                }
+            });
+            isEditActionLister = false;
+        }
+
+
     }
 
     private Observer getPersonObserver() {
