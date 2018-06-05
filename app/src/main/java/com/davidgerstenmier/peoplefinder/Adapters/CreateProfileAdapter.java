@@ -6,19 +6,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import com.davidgerstenmier.peoplefinder.HobbyHolder;
-import com.davidgerstenmier.peoplefinder.MainActivity;
 import com.davidgerstenmier.peoplefinder.Models.Hobby;
 import com.davidgerstenmier.peoplefinder.R;
-
 import java.util.List;
-import java.util.zip.Inflater;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class CreateProfileAdapter extends RecyclerView.Adapter<HobbyHolder> {
 

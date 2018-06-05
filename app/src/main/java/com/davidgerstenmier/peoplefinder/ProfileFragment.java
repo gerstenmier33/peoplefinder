@@ -16,8 +16,6 @@ import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -31,9 +29,7 @@ import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
-import com.davidgerstenmier.peoplefinder.Adapters.CreateProfileAdapter;
 import com.davidgerstenmier.peoplefinder.Adapters.ProfileRecyclerAdapter;
-import com.davidgerstenmier.peoplefinder.Dialogs.CreateProfileDialog;
 import com.davidgerstenmier.peoplefinder.Models.Person;
 import com.davidgerstenmier.peoplefinder.utils.ImageUtils;
 import com.davidgerstenmier.peoplefinder.utils.MainActivityViewModel;
@@ -210,10 +206,6 @@ public class ProfileFragment extends Fragment {
 
         public ItemOffsetDecoration(int itemOffset) {
             mItemOffset = itemOffset;
-        }
-
-        public ItemOffsetDecoration(@NonNull Context context, @DimenRes int itemOffsetId) {
-            this(context.getResources().getDimensionPixelSize(itemOffsetId));
         }
 
         @Override

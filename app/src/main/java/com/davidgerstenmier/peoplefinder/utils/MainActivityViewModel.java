@@ -4,13 +4,10 @@ import android.app.Activity;
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.MutableLiveData;
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.Menu;
 import android.widget.Toast;
-
 import com.davidgerstenmier.peoplefinder.Models.Hobby;
 import com.davidgerstenmier.peoplefinder.Models.Person;
 import com.davidgerstenmier.peoplefinder.R;
@@ -18,7 +15,6 @@ import com.davidgerstenmier.peoplefinder.utils.FilterPackage.FilterManager;
 import com.davidgerstenmier.peoplefinder.utils.Firebase.FirebaseRepo;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class MainActivityViewModel extends AndroidViewModel {
 

@@ -1,21 +1,14 @@
 package com.davidgerstenmier.peoplefinder.utils;
 
-import android.content.ContentUris;
+
 import android.content.Context;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Environment;
-import android.provider.DocumentsContract;
-import android.provider.MediaStore;
-import android.support.annotation.Nullable;
 import android.support.media.ExifInterface;
 import android.util.Base64;
-import android.util.Log;
-
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;

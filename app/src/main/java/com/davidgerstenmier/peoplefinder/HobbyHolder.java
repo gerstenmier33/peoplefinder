@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
+
 
 public class HobbyHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 

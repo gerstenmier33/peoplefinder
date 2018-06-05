@@ -6,7 +6,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.davidgerstenmier.peoplefinder.HobbyHolder;
 import com.davidgerstenmier.peoplefinder.Models.Hobby;
 import com.davidgerstenmier.peoplefinder.R;

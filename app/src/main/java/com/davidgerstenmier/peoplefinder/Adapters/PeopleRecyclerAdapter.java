@@ -11,28 +11,22 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
-import com.davidgerstenmier.peoplefinder.HobbyHolder;
 import com.davidgerstenmier.peoplefinder.MainActivity;
 import com.davidgerstenmier.peoplefinder.Models.Person;
 import com.davidgerstenmier.peoplefinder.ProfileFragment;
 import com.davidgerstenmier.peoplefinder.R;
 import com.davidgerstenmier.peoplefinder.utils.ImageUtils;
-
-import java.awt.font.TextAttribute;
 import java.util.ArrayList;
 
 import butterknife.BindView;

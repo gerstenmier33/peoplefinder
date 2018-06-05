@@ -33,7 +33,6 @@ public class FirebaseRepo implements FirebaseRepoInterface {
     private FirebaseDatabase database;
     private DatabaseReference ref;
     private DatabaseReference refHobbies;
-    private DatabaseReference refPerson;
     private MainActivityViewModel mainActivityViewModel;
 
     public FirebaseRepo(MainActivityViewModel mainActivityViewModel) {
@@ -66,7 +65,7 @@ public class FirebaseRepo implements FirebaseRepoInterface {
             @Override
             public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
 
-                //Log.d(TAG,"ADDED_PERSON "+mainActivityViewModel.getPerson().getName());
+
             }
         });
     }
