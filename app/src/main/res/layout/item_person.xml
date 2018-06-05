@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/item_cardview_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_textview_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:textSize="@dimen/header_text_size"
+            android:textColor="@android:color/white"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/item_imageview_delete"
+            android:layout_marginEnd="@dimen/drawable_padding"
+            />
+
+        <ImageView
+            android:id="@+id/item_imageview_delete"
+            android:layout_width="@dimen/item_image_size"
+            android:layout_height="@dimen/item_image_size"
+            android:src="@drawable/ic_delete_black_24dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/drawable_padding"
+            android:tint="@android:color/white"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/item_cardview_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:visibility="visible">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/item_person_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/item_person_cardview_image"
+                android:layout_width="@dimen/cardview_image_size"
+                android:layout_height="@dimen/cardview_image_size"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_portrait_black_24dp"
+                />
+
+            <TextView
+                android:id="@+id/item_person_cardview_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/list_text_size"
+                android:textColor="#999999"
+                android:textStyle="italic"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/cardview_margin_top_bottom"
+                android:layout_toRightOf="@+id/item_person_cardview_image" />
+
+            <TextView
+                android:id="@+id/item_person_cardview_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/list_text_size"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/item_person_cardview_id" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_right_black_24dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/cardview_margin_left_right"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

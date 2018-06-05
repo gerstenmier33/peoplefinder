@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:id="@+id/dialog_image_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="#cccccc"
+            android:padding="20dp"
+            app:srcCompat="@drawable/ic_portrait_black_24dp"/>
+
+        <TextView
+            android:id="@+id/dialog_textview_editimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:drawableEnd="@drawable/ic_mode_edit_black_24dp"
+            android:text="@string/edit"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginBottom="3dp"
+            android:textAlignment="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/dialog_image_wrap"
+        android:layout_above="@id/dialog_button_layout">
+
+        <RadioGroup
+            android:id="@+id/dialog_createperson_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp">
+
+            <RadioButton
+                android:id="@+id/dialog_createperson_radiobutton_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male"
+                android:textSize="@dimen/header_text_size"
+                android:textColor="@color/colorPrimaryDark"
+                android:buttonTint="@color/colorAccent"
+                android:layout_marginEnd="15dp"/>
+
+            <RadioButton
+                android:id="@+id/dialog_createperson_radiobutton_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female"
+                android:textSize="@dimen/header_text_size"
+                android:buttonTint="@color/colorAccent"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </RadioGroup>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/dialogue_create_textinput_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:paddingTop="5dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/dialogue_create_edittext_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#eeeeee"
+                android:hint="@string/name_hint"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:padding="@dimen/edittext_padding" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/dialogue_create_textinput_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:paddingTop="5dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/dialogue_create_edittext_age"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#eeeeee"
+                android:hint="@string/age_text"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:padding="@dimen/edittext_padding" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/dialog_hobby_entry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/dialogue_create_textinput_hobby"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/dialogue_create_edittext_hobby"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:imeOptions="actionDone"
+                        android:background="#eeeeee"
+                        android:hint="@string/hobbies_hint"
+                        android:padding="@dimen/edittext_padding" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:id="@+id/dialogue_button_createhobby"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="15dp"
+                    android:elevation="5dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_add_box_black_24dp"
+                    android:foregroundGravity="center"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/dialog_createperson_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/dialog_hobby_entry"
+                android:background="#eeeeee"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/edittext_padding"
+                android:layout_marginTop="@dimen/edittext_padding" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/button"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:text="@string/button_create"
+            android:padding="@dimen/drawable_padding" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:text="@string/cancel"
+            android:padding="@dimen/drawable_padding" />
+    </LinearLayout>
+
+</RelativeLayout>

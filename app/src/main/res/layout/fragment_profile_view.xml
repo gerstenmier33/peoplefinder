@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialogue_relativelayout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:id="@+id/dialogue_constraint_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/dialogue_imageview_image"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_margin="@dimen/dialogue_margin"
+            android:src="@drawable/ic_portrait_black_24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/dialogue_imageview_image"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:id="@+id/dialogue_textview_name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="@dimen/dialogue_margin"
+                android:text="@string/name_title"
+                android:textColor="#dddddd"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/dialogue_textview_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name_default"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/dialogue_textview_gender_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dialogue_margin"
+                android:text="@string/gender_title"
+                android:textColor="#dddddd"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/dialogue_textview_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="@string/male"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/dialogue_textview_age_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dialogue_margin"
+                android:text="@string/age_title"
+                android:textColor="#dddddd"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/dialogue_textview_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/age_default"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cardview_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_below="@+id/dialogue_constraint_view"
+        android:layout_marginTop="@dimen/dialogue_margin"
+        >
+
+        <LinearLayout
+            android:id="@+id/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="horizontal"
+            android:background="@drawable/shadow"
+            android:layout_marginBottom="5dp"/>
+
+        <RelativeLayout
+            android:id="@+id/dialogue_relativelayout_edithobby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shadow"
+            >
+
+            <TextView
+                android:id="@+id/dialogue_textview_hobby_create"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:drawableEnd="@drawable/ic_mode_edit_black_24dp"
+                android:text="@string/hobby_create"
+                android:textAlignment="center"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/dialogue_edittext_addhobby"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="@dimen/edittext_padding"
+                android:background="#eeeeee"
+                android:layout_below="@+id/dialogue_textview_hobby_create"
+                android:inputType="text"
+                android:hint="@string/hobbies_hint"
+                android:imeOptions="actionDone"/>
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/dialogue_button_createhobby"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="@dimen/edittext_padding"
+                android:elevation="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_alignTop="@id/dialogue_edittext_addhobby"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_add_box_black_24dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/dialogue_textview_hobby_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/hobby_title"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/dialogue_relativelayout_edithobby"
+            android:textColor="@android:color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/hobby_delete_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hobby_delete_by_tap"
+            android:textAlignment="center"
+            android:layout_below="@+id/dialogue_textview_hobby_title"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/dialogue_recyclerview_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/hobby_delete_description"
+            android:layout_marginTop="@dimen/edittext_padding"
+            android:padding="@dimen/edittext_padding" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

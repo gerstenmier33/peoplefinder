@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "504592130603",
+    "firebase_url": "https://people-finder-d691b.firebaseio.com",
+    "project_id": "people-finder-d691b",
+    "storage_bucket": "people-finder-d691b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504592130603:android:4febe4464373bbb4",
+        "android_client_info": {
+          "package_name": "com.davidgerstenmier.peoplefinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504592130603-ee487necb06noba8vtnq7bgh4gf42i1t.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "504592130603-ee487necb06noba8vtnq7bgh4gf42i1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjKzdKNDn71B-JmDapMUavdV8Mdbm3X1w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

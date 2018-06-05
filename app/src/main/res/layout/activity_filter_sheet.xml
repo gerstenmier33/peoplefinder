@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/filter_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/edittext_padding"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <LinearLayout
+        android:id="@+id/filtermenu_top_bar"
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:weightSum="9">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/filter_sheet_btn_clear_filters"
+                android:layout_centerHorizontal="true"
+                android:layout_width="75dp"
+                android:layout_margin="@dimen/edittext_padding"
+                android:layout_height="75dp"
+                android:src="@drawable/ic_clear_all_black_24dp"
+                />
+
+            <TextView
+                android:layout_below="@id/filter_sheet_btn_clear_filters"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:text="@string/clear_filters" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/filter_sheet_men"
+                android:layout_centerHorizontal="true"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/ic_accessibility_black_24dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_below="@id/filter_sheet_men"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:text="@string/filter_gender_male"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/filter_sheet_women"
+                android:layout_centerHorizontal="true"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="15dp"
+                android:src="@drawable/ic_accessibility_black_24dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_below="@id/filter_sheet_women"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:text="@string/filter_gender_female"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/filtermenu_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal"
+        android:weightSum="9">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/filter_sheet_age_sort"
+                android:layout_centerHorizontal="true"
+                android:layout_width="75dp"
+                android:layout_margin="@dimen/edittext_padding"
+                android:layout_height="75dp"
+                android:src="@drawable/ic_access_time_black_24dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_below="@id/filter_sheet_age_sort"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:text="@string/sort_by_age" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/filter_sheet_name_sort"
+                android:layout_centerHorizontal="true"
+                android:layout_width="75dp"
+                android:layout_margin="@dimen/edittext_padding"
+                android:layout_height="75dp"
+                android:src="@drawable/ic_sort_by_alpha_black_24dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_below="@id/filter_sheet_name_sort"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:text="@string/sort_by_name"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/filter_sheet_order"
+                android:layout_centerHorizontal="true"
+                android:layout_width="75dp"
+                android:layout_margin="@dimen/edittext_padding"
+                android:layout_height="75dp"
+                android:src="@drawable/ic_sort_black_24dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_below="@id/filter_sheet_order"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:text="@string/order_list"/>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

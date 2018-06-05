@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Peoplefinder</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_filter">Filter</string>
+    <string name="action_edit">Edit</string>
+    <string name="delete">Delete</string>
+
+
+    <!--  Strings for Create Person Dialog-->
+    <string name="name_hint">Name</string>
+    <string name="male_gender_text">Male</string>
+    <string name="female_gender_text">Female</string>
+    <string name="age_text">Age</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="edit">Edit</string>
+    <string name="hobbies_text">Hobbies</string>
+    <string name="hobbies_hint">Hobby</string>
+    <string name="button_create">Create</string>
+    <string name="save">Save</string>
+    <string name="media_choice">Please select Gallery or Camera</string>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <!--  Strings for Person Profile Dialog-->
+    <string name="name_default">John Doe</string>
+    <string name="age_default">34</string>
+    <string name="name_title">Name</string>
+    <string name="gender_title">Gender</string>
+    <string name="age_title">Age</string>
+    <string name="hobby_title">Hobbies</string>
+    <string name="hobby_exists">Hobby already exists</string>
+    <string name="hobby_create">Create new hobbies</string>
+    <string name="hobby_delete_by_tap">Tap a hobby to delete</string>
+
+    <!-- Strings for Media Snackbar-->
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- String for Person Object Validation-->
+    <string name="age_validation">Please set an age</string>
+    <string name="gender_validation">Please select a gender</string>
+    <string name="name_validation">Please enter a valid name</string>
+
+    <!-- Alert Dialog Strings -->
+    <string name="alert">Alert!</string>
+    <string name="delete_alert">This will permanently remove this profile.</string>
+    <string name="continue_alert">Continue</string>
+    
+    <!--Filter String -->
+    <string name="clear_filters">Clear Filter</string>
+    <string name="sort_by_age">Age</string>
+    <string name="filter_gender_male">Men Only</string>
+    <string name="filter_gender_female">Women Only</string>
+    <string name="sort_by_name">Name</string>
+    <string name="order_list">Order By</string>
+
+
+</resources>
